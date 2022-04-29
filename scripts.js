@@ -4,9 +4,13 @@ var mensajeEncriptado = document.getElementById("mensajeEncriptado");
 //-- Reglas para encriptar
 const encriptar = () => {
   const textArea = document.getElementById("textArea").value;
+  mensajeEncriptado.classList.add("col-der");
   ningunMensaje.style.display = "none";
-  let i = 0;
+  let i = -1;
   let textAux = "";
+  if (textArea == "") {
+    textAux = "No has escrito nada. Por favor escribe algo";
+  }
   while (i < textArea.length) {
     if (textArea.charAt(i) == "e") {
       textAux += textArea.charAt(i).replace("e", "enter");
@@ -23,8 +27,11 @@ const encriptar = () => {
     }
     i++;
 
-    const content = `<textarea rows="10" cols="50" readonly  id="resultadoTexto"> ${textAux}</textarea>
-    <button onclick="copyToClipBoard()">Copiar</button>
+    const content = `
+    
+    <textarea readonly class="text-area-script" id="resultadoTexto">${textAux}</textarea>
+    <button class="btn-copiar" onclick="copyToClipBoard()">Copiar</button>
+    
     `;
 
     mensajeEncriptado.innerHTML = content;
@@ -48,6 +55,9 @@ const desencriptar = () => {
   ningunMensaje.style.display = "none";
 
   let textAux = "";
+  if (textArea2 == "") {
+    textArea2 = "No has escrito nada. Por favor escribe algo";
+  }
 
   while (textArea2.includes("enter")) {
     textAux += textArea2.replace("enter", "e");
@@ -70,8 +80,9 @@ const desencriptar = () => {
     textArea2 = textArea2.replace("ufat", "u");
   }
 
-  const content = `<textarea rows="10" cols="50" readonly  id="resultadoTexto"> ${textArea2}</textarea>
-  <button onclick="copyToClipBoard()">Copiar</button>`;
+  const content = `<textarea readonly class="text-area-script"  id="resultadoTexto"> ${textArea2}</textarea>
+  <button class="btn-copiar" onclick="copyToClipBoard()">Copiar</button>`;
+
   mensajeEncriptado.innerHTML = content;
 };
 
