@@ -8,10 +8,10 @@
     <title>Document</title>
   </head>
   <body>
+    <header>
+      <img src="./assets/logo.png" alt="" />
+    </header>
     <div class="container">
-      <header>
-        <img src="./assets/logo.png" alt="" />
-      </header>
       <!-- COLUMNA IZQUIERDA -->
       <div class="col-izq">
         <div>
@@ -23,14 +23,15 @@
             required
           ></textarea>
         </div>
-        <div class="tex">
+        <div class="text-btn">
           <p>
             <img src="./assets/signo.png" alt="" /> Solo letras minúsculas y sin
             acentos
           </p>
-
-          <button class="btn-enc" id="encriptar">Encriptar</button>
-          <button class="btn-des" id="desencriptar">Desencriptar</button>
+          <div class="btn-main">
+            <button class="btn-enc" id="encriptar">Encriptar</button>
+            <button class="btn-des" id="desencriptar">Desencriptar</button>
+          </div>
         </div>
       </div>
 
@@ -43,6 +44,12 @@
 
       <div id="mensajeEncriptado"></div>
     </div>
+    <footer class="footer">
+      <p>
+        Design by
+        <a href="https://github.com/PulpoI" target="_blank">Pablo Duarte</a>
+      </p>
+    </footer>
 
     <script src="scripts.js"></script>
   </body>

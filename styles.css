@@ -25,14 +25,14 @@ header{
 }
 
 .text-area {
-    width: 100%;
+    width: 80%;
     height: 400px;
     border-width: 0;
     resize: none;
     padding: 0;
     background-color: #E5E5E5;
     font-size: 20px;
-    padding: 75px 10px 0px 20px;
+    padding: 130px 10px 0px 90px;
     color: #0A3871;
 }
 
@@ -40,9 +40,8 @@ header{
     outline: none;
 }
 
-.text-info {
-    display: flex;
-    flex-direction: column;
+.text-btn {
+    margin-top: -55px;
 }
 
 .text-area-script{
@@ -101,3 +100,66 @@ button{
     background-color: #E5E5E5;
     border: solid 1px #0A3871;
 }
+
+a {
+    text-decoration: none;
+}
+
+a:-webkit-any-link {
+    color: #495057;
+}
+
+p {
+    color: #495057;
+    text-decoration: none;
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    background-color: #cfcfcf;
+    padding: 30px 0px 20px 0px;
+    text-decoration: none;
+    
+}
+
+@media (max-width:  767.98px) {
+    .container{
+        flex-direction: column;
+        height: 100%;
+    }
+    .text-area{
+      
+        height: 300px;
+        padding-left: 0px;
+    }
+    .col-izq{
+    width: max-content;
+      height: 80vh;
+    }
+    .img-col-der{
+        display: none;
+    }
+    .col-der{
+        width: 80%;
+    }
+    .text-area-script{
+        height: 100px;
+       
+    }
+    .btn-copiar {
+        margin-top: 20px;
+    }
+ }
+
+ @media (max-width: 575.98px) { 
+     .btn-main{
+         display: flex;
+         flex-direction: column;
+     }
+     .col-der{
+         margin-top: 60px;
+     }
+     .text-area{
+        width: 100%
+     }
+  }
