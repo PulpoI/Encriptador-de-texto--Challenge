@@ -80,8 +80,10 @@ const desencriptar = () => {
     textArea2 = textArea2.replace("ufat", "u");
   }
 
-  const content = `<textarea readonly class="text-area-script"  id="resultadoTexto"> ${textArea2}</textarea>
-  <button class="btn-copiar" onclick="copyToClipBoard()">Copiar</button>`;
+  const content = ` <div class="col-der">
+  <textarea readonly class="text-area-script"  id="resultadoTexto">${textArea2}</textarea>
+  <button class="btn-copiar" onclick="copyToClipBoard()">Copiar</button> </di>
+  `;
 
   mensajeEncriptado.innerHTML = content;
 };
